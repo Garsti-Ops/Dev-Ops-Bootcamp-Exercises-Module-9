@@ -1,0 +1,2 @@
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+aws ec2 create-security-group --group-name "Exercises" --description "Exercises" --vpc-id vpc-0e59c4945a7aa5818
