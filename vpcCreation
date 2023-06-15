@@ -1,4 +1,10 @@
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
+aws ec2 create-subnet --vpc-id vpc-0e59c4945a7aa5818 --cidr-block 10.0.1.0/24
+aws ec2 create-internet-gateway --query InternetGateway.InternetGatewayId --output text
+aws ec2 attach-internet-gateway --vpc-id vpc-0e59c4945a7aa5818 --internet-gateway-id igw-0ce5354c557f7f80a
+aws ec2 create-route-table --vpc-id vpc-0e59c4945a7aa5818 --query RouteTable.RouteTableId --output text
+aws ec2 create-route --route-table-id rtb-0d0e3366bcbb67c35 --destination-cidr-block 0.0.0.0/0 --gateway-id igw-0ce5354c557f7f80a
+aws ec2 associate-route-table --subnet-id subnet-0bb9123ab156145e7 --route-table-id rtb-0d0e3366bcbb67c35
 
 aws ec2 create-security-group --group-name "Exercises" --description "Exercises" --vpc-id vpc-0e59c4945a7aa5818
 
