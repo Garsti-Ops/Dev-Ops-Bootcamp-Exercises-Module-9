@@ -1,1 +1,1 @@
-aws ec2 run-instances --image-id ami-0122fd36a4f50873a --count 1 --instance-type t2.micro --security-group-ids sg-0c89a69a387ffcdd2 --subnet-id subnet-0cd1148a877cbe130 --key-name MyKpCli
+aws ec2 run-instances --image-id ami-0122fd36a4f50873a --count 1 --instance-type t2.micro --security-group-ids sg-0c89a69a387ffcdd2 --subnet-id subnet-0bb9123ab156145e7 --key-name MyKpCli
