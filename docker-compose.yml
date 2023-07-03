@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  app:
+    image: garstiops/garstiges-secret-repo:node-app-1.147.0-187
+    ports:
+      - '6000:6000'
